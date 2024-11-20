@@ -1,37 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Netmaker Network Visualization
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a network visualization tool for Netmaker, built using React and Next.js. It provides an interactive graph interface to display and manage network nodes and their connections.
 
-```bash
+## Features
+
+- Interactive network graph visualization
+- Node filtering and search functionality
+- Detailed node information display via tooltips
+- Responsive design for both desktop and mobile devices
+- Dark mode UI
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (v14 or later)
+- npm (v6 or later) or yarn
+
+## Installation
+
+1. Clone the repository:
+
+   ```
+   git clone git@github.com:alexandriaroberts/network-graph-app.git
+   cd netmaker-network-visualization
+   ```
+
+2. Install the dependencies:
+   ```
+   npm install
+   # or
+   yarn install
+   ```
+
+## Usage
+
+To run the development server:
+
+```
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/components`: React components used in the project
+  - `/ui`: Reusable UI components (Button, Input, etc.)
+  - `network-graph.tsx`: Main network graph component
+- `/pages`: Next.js pages
+- `/styles`: Global styles and Tailwind CSS configuration
+- `/lib`: Utility functions and helpers
 
-## Learn More
+## Dependencies
 
-To learn more about Next.js, take a look at the following resources:
+This project uses the following main dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- React
+- Next.js
+- ReactFlow
+- Tailwind CSS
+- shadcn/ui components
+- Lucide React (for icons)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+For a full list of dependencies, please refer to the `package.json` file.
 
-## Deploy on Vercel
+## Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To customize the network graph:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# network-graph-app
+1. Modify the `initialNodes` and `initialEdges` in `network-graph.tsx` to change the graph structure.
+2. Adjust the `mockNodeData` object to update node information.
+3. Customize styles in the component files or in the Tailwind configuration.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+If you encounter any problems or have any questions, please open an issue in the GitHub repository.
