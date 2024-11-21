@@ -75,7 +75,12 @@ const mockNodeData = {
   },
 };
 
-const NetworkNode = ({ data }: NodeProps) => {
+interface NetworkNodeData {
+  label: keyof typeof mockNodeData;
+  type: string;
+}
+
+const NetworkNode = ({ data }: NodeProps<NetworkNodeData>) => {
   return (
     <TooltipProvider>
       <Tooltip>
@@ -328,11 +333,13 @@ export default function NetworkGraph() {
   const filteredNodes = nodes.filter(
     (node) =>
       node.data.label.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      mockNodeData[node.data.label].ip.includes(searchTerm) ||
-      mockNodeData[node.data.label].os
+      mockNodeData[node.data.label as keyof typeof mockNodeData].ip.includes(
+        searchTerm
+      ) ||
+      mockNodeData[node.data.label as keyof typeof mockNodeData].os
         .toLowerCase()
         .includes(searchTerm.toLowerCase()) ||
-      mockNodeData[node.data.label].location
+      mockNodeData[node.data.label as keyof typeof mockNodeData].location
         .toLowerCase()
         .includes(searchTerm.toLowerCase())
   );
