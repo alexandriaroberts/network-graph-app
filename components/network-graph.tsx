@@ -83,15 +83,15 @@ const NetworkNode = ({ data }: NodeProps) => {
           <div
             className={`rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 ${
               data.type === 'egress'
-                ? 'w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-purple-600 to-purple-800'
+                ? 'w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-600 to-purple-800'
                 : data.type === 'server'
-                ? 'w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-500 to-purple-700'
+                ? 'w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-purple-700'
                 : data.type === 'gateway'
-                ? 'w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-green-500 to-green-700'
-                : 'w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-blue-400 to-blue-600 opacity-70'
+                ? 'w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-green-500 to-green-700'
+                : 'w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-400 to-blue-600 opacity-70'
             }`}
           >
-            <div className='text-white font-semibold text-[10px] md:text-xs'>
+            <div className='text-white font-semibold text-[10px] sm:text-xs'>
               {data.label}
             </div>
           </div>
@@ -343,12 +343,12 @@ export default function NetworkGraph() {
       <div className='flex flex-col border-b border-gray-800'>
         <div className='flex items-center justify-between p-4'>
           <div className='flex items-center gap-4'>
-            <h1 className='text-xl md:text-2xl font-bold text-white'>
+            <h1 className='text-xl sm:text-2xl font-bold text-white'>
               netmaker
             </h1>
             <Button
               variant='link'
-              className='hidden md:inline-flex text-blue-400 hover:text-blue-300'
+              className='hidden sm:inline-flex text-blue-400 hover:text-blue-300'
             >
               View All Networks
             </Button>
@@ -359,7 +359,7 @@ export default function NetworkGraph() {
                 <Button
                   variant='outline'
                   size='icon'
-                  className='md:hidden bg-gray-800 border-gray-700 text-gray-300 hover:bg-gray-700'
+                  className='sm:hidden bg-gray-800 border-gray-700 text-gray-300 hover:bg-gray-700'
                 >
                   <Menu className='h-4 w-4' />
                   <span className='sr-only'>Open menu</span>
@@ -400,7 +400,7 @@ export default function NetworkGraph() {
                 </div>
               </SheetContent>
             </Sheet>
-            <div className='hidden md:flex items-center gap-2'>
+            <div className='hidden sm:flex items-center gap-2'>
               <Button
                 variant='outline'
                 className='gap-2 bg-gray-800 border-gray-700 text-gray-300 hover:bg-gray-700'
@@ -443,7 +443,7 @@ export default function NetworkGraph() {
               <TabsTrigger
                 key={tab}
                 value={tab.toLowerCase().replace(' ', '-')}
-                className='rounded-none border-b-2 border-transparent px-2 md:px-4 py-2 text-xs md:text-sm text-gray-400 hover:text-gray-200 data-[state=active]:border-blue-500 data-[state=active]:text-blue-500 whitespace-nowrap'
+                className='rounded-none border-b-2 border-transparent px-2 sm:px-4 py-2 text-xs sm:text-sm text-gray-400 hover:text-gray-200 data-[state=active]:border-blue-500 data-[state=active]:text-blue-500 whitespace-nowrap'
               >
                 {tab} {index < 4 && `(${index})`}
               </TabsTrigger>
@@ -454,7 +454,7 @@ export default function NetworkGraph() {
 
       {/* Graph Area */}
       <div className='relative flex-1'>
-        <div className='absolute left-4 top-4 z-10 flex items-center bg-gray-800 rounded-md w-full max-w-[300px] md:max-w-[400px]'>
+        <div className='absolute left-4 top-4 z-10 flex items-center bg-gray-800 rounded-md w-full max-w-[300px] sm:max-w-[400px]'>
           <Search className='w-5 h-5 text-gray-400 ml-3' />
           <Input
             type='text'
